@@ -1,24 +1,25 @@
-
 /*
  * I wrote bubble sort because I need to implement a
- * multi-process bubble sort program.
+ * multi-process bubble sort program. This program 
+ * sorts numbers in descending way.
  */
 #include <iostream>
+#include <vector>
 using namespace std;
-int bubbleSort(int *a, int length)
+int bubbleSort(std::vector<int> &nums,int begin, int end)
 {
     bool change = true;
     int swap;
     while(change)
     {
         change = false;
-        for(int i=0; i < length-1; i++)
+        for(int i=begin; i < end-1; i++)
         {
-            if(a[i] > a[i+1])
+            if(nums[i] < nums[i+1])
             {
-                swap = a[i];
-                a[i] = a[i+1];
-                a[i+1] = swap;
+                swap = nums[i];
+                nums[i] = nums[i+1];
+                nums[i+1] = swap;
                 change = true;
             }
         }
@@ -28,11 +29,11 @@ int bubbleSort(int *a, int length)
 }
 
 int main() {
-    int a[] = {6,5,4,3,2,1};
-    bubbleSort(a, 6);
-    for(int i=0; i < 6; i++)
+    std::vector<int> v {65,32,698,678,3254,68,2,35,38,48,38,689,1,2,76,3,38,145,99};
+    bubbleSort(v, 3, 7);
+    for(int i=0; i < v.size(); i++)
     {
-        cout << a[i] << endl;
+        cout << v[i] << endl;
     }
     return 0;
 }
