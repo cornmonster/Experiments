@@ -6,14 +6,14 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-int bubbleSort(std::vector<int> &nums,int begin, int end)
+int bubbleSort(std::vector<long long> &nums,int begin, int end)
 {
     bool change = true;
-    int swap;
-    while(change)
+    long long swap;
+    for(int j=0; j < nums.size(); j++)
     {
         change = false;
-        for(int i=begin; i < end-1; i++)
+        for(int i=0; i < end-1-j; i++)
         {
             if(nums[i] < nums[i+1])
             {
@@ -23,17 +23,35 @@ int bubbleSort(std::vector<int> &nums,int begin, int end)
                 change = true;
             }
         }
+        if(!change)
+        {
+            break;
+        }
     }
     return 0;
-
 }
 
-int main() {
-    std::vector<int> v {65,32,698,678,3254,68,2,35,38,48,38,689,1,2,76,3,38,145,99};
-    bubbleSort(v, 3, 7);
-    for(int i=0; i < v.size(); i++)
+int main(int argc, char **argv) {
+    std::vector<long long> nums;
+    long long temp;
+    FILE *file;
+
+    file = fopen(argv[1], "r");
+    if(file == NULL)
     {
-        cout << v[i] << endl;
+        fprintf(stderr, "Can't open this file.\n");
+    }
+
+    while((fscanf(file, "%lld\n", &temp)) != EOF)
+    {
+        nums.push_back(temp);
+    }
+
+    bubbleSort(nums, 0, nums.size());
+
+    for(int i=0; i < nums.size(); i++)
+    {
+        printf("%lld\n", nums[i]);
     }
     return 0;
 }
