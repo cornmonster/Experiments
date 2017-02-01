@@ -24,3 +24,5 @@ Here is the description for each file:
 	program uses two threads to update a global variable, because different
 	platform have different scheduler, it outputs a integer between 2 and 
 	2000000 on macos, and outputs 2000000 all the time on ubuntu.
+7. thread_experiment.cc
+	This program is a simple version of multi-thread bubble sort.
