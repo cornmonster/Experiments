@@ -26,3 +26,6 @@ Here is the description for each file:
 	2000000 on macos, and outputs 2000000 all the time on ubuntu.
 7. thread_experiment.cc
 	This program is a simple version of multi-thread bubble sort.
+8. signal_experiment.cc
+	A program to figure out how to handle Ctrl+c for a multiple thread pro-
+	gram.
