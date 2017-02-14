@@ -1,6 +1,5 @@
 Hello world,
-This is a repository consisting of files I wrote to practice
-things I learned in school.
+This is a repository consisting of files I wrote to practice things I learned at school.
 
 Here is the description for each file:
 
@@ -29,3 +28,6 @@ Here is the description for each file:
 8. signal_experiment.cc
 	A program to figure out how to handle Ctrl+c for a multiple thread pro-
 	gram.
+9. echoserver_ppt.cc & client.cc
+	A multiple thread echoserver program and a client program. Try to figure	out how to use socket. 
+	how to use
