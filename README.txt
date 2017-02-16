@@ -31,3 +31,6 @@ Here is the description for each file:
 9. echoserver_ppt.cc & client.cc
 	A multiple thread echoserver program and a client program. Try to figure	
 	out how to use socket.
+10. dir_experiment.cc
+	A program that can print all the files and sub-directories of a given
+	directory.
